@@ -1,0 +1,38 @@
+[
+  { "keys": ["ctrl+shift+h"],
+    "command": "insert_snippet",
+    "args": {
+      "contents": "console.log('=== HEARTBEAT $TM_FILENAME [$TM_LINE_NUMBER] ===');${0}"
+    },
+    "context": [{
+      "key": "selector",
+      "operator": "equal",
+      "operand": "source.js",
+      "match_all": true
+    }]
+  },
+  { "keys": ["ctrl+shift+d"],
+    "command": "insert_snippet_and_clipboard",
+    "args": {
+      "contents": "console.log('=== $SELECTION_OR_CLIPBOARD $TM_FILENAME [$TM_LINE_NUMBER] ===', $SELECTION_OR_CLIPBOARD);${0}"
+    },
+    "context": [{
+      "key": "selector",
+      "operator": "equal",
+      "operand": "source.js",
+      "match_all": true
+    }]
+  },
+  { "keys": ["ctrl+shift+c"],
+    "command": "insert_snippet",
+    "args": {
+      "contents": "console.log('=== arguments.callee.caller $TM_FILENAME [$TM_LINE_NUMBER] ===', arguments.callee.caller);${0}"
+    },
+    "context": [{
+      "key": "selector",
+      "operator": "equal",
+      "operand": "source.js",
+      "match_all": true
+    }]
+  }
+]
